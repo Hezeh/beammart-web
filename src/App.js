@@ -8,6 +8,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Container } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
@@ -15,6 +16,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    textAlign: 'center',
+  },
+  brand: {
+    flexGrow: 1,
+    textAlign: 'center',
+    fontSize: 30
   },
   root: {
     flexGrow: 1,
@@ -24,12 +31,14 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
       width: theme.spacing(1000),
       height: theme.spacing(40),
-    },
+    }
   },
   button: {
     margin: theme.spacing(1),
     paddingTop: 50,
     flexGrow: 1,
+    justifyContent: 'center',
+    display: 'flex'
   },
   titleContainer: {
     margin: theme.spacing(1)
@@ -42,6 +51,20 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 10,
     paddingTop: 2,
     height: 42,
+  },
+  paper: {
+    background: 'linear-gradient(45deg, #ec008c 10%, #E94057 60%, #fc6767 90%)',
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white'
+  },
+  merchantPaper: {
+    background: 'linear-gradient(45deg, #ff00cc 10%, #333399 60%, #fc6767 90%)',
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white'
+  },
+  all: {
+    background: '#000000',
+    flexGrow: 1,
   }
 }));
 
@@ -49,38 +72,35 @@ function ButtonAppBar() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
       <AppBar position="static" color="secondary">
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.brand}>
             Beammart
           </Typography>
         </Toolbar>
       </AppBar>
-
-    </div>
   );
 }
 
 function App() {
   const classes = useStyles();
   return (
-    <>
+    <Grid className={classes.all}>
       <ButtonAppBar />
       <div className={classes.root}>
-        <Paper elevation={3} >
+        <Paper elevation={3} className={ classes.paper} >
           <div>
             <Typography variant="h4" className={classes.title}>
               Beammart for Consumers
           </Typography>
             <Typography variant="h6" className={classes.title}>
-              Search and Discover products sold near you.
+              Search and Discover products sold nearby.
           </Typography>
             <div className={classes.button}>
-              <a
+              {/* <a
                 href="https://apple.com"
                 target="_blank"
-              ><img src={ioslogo} height={50} className={classes.iosImage} /> </a>
+              ><img src={ioslogo} height={50} className={classes.iosImage} /> </a> */}
               <a
                 href="https://play.google.com"
                 target="_blank"
@@ -88,7 +108,7 @@ function App() {
             </div>
           </div>
         </Paper>
-        <Paper elevation={3} >
+        <Paper elevation={3} className={classes.merchantPaper} >
           <div>
             <Container className={classes.titleContainer}>
               <Typography variant="h4" className={classes.title}>
@@ -96,13 +116,13 @@ function App() {
               </Typography>
             </Container>
             <Typography variant="h6" className={classes.title}>
-              Add your product offerings and help your customers discover them for free!
+              Add your product offerings and let your customers discover them for free!
           </Typography>
             <div className={classes.button}>
-              <a
+              {/* <a
                 href="https://apple.com"
                 target="_blank"
-              ><img src={ioslogo} height={50} className={classes.iosImage} /> </a>
+              ><img src={ioslogo} height={50} className={classes.iosImage} /> </a> */}
               <a
                 href="https://play.google.com"
                 target="_blank"
@@ -111,7 +131,7 @@ function App() {
           </div>
         </Paper>
       </div>
-    </>
+    </Grid>
   );
 }
 
