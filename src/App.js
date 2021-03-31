@@ -102,7 +102,7 @@ function App() {
                 target="_blank"
               ><img src={ioslogo} height={50} className={classes.iosImage} /> </a> */}
               <a
-                href="https://play.google.com"
+                href="https://play.google.com/store/apps/details?id=com.beammart.beammart"
                 target="_blank"
               ><img src={playBadge} height={60} /> </a>
             </div>
@@ -124,7 +124,7 @@ function App() {
                 target="_blank"
               ><img src={ioslogo} height={50} className={classes.iosImage} /> </a> */}
               <a
-                href="https://play.google.com"
+                href="https://play.google.com/store/apps/details?id=com.beammart.merchants"
                 target="_blank"
               ><img src={playBadge} height={60} /> </a>
             </div>
