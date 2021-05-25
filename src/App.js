@@ -130,9 +130,9 @@ function App() {
         <CustomCard image={HomeImage} title="Personalized Recommendations" description="Description" />
         <CustomCard image={DirectionsImage} title="Directions" description="Get directions from your current location to the shop" />
         <CustomCard image={SearchImage} title="Search" description="Find what you are looking for with the search functionality" />
-        <CustomCard image={CategoryImage} title="Different Categories" description="Discover products across categories" />
+        {/* <CustomCard image={CategoryImage} title="Different Categories" description="Discover products across categories" />
         <CustomCard image={WishlistImage} title="Wishlist" description="Save Items you might want to buy in a wishlist" />
-        <CustomCard image={ShopImage} title="Merchant Details" description="Find more about the shop including operating hours and more products" />
+        <CustomCard image={ShopImage} title="Merchant Details" description="Find more about the shop including operating hours and more products" /> */}
         <Paper elevation={3} className={classes.merchantPaper} >
           <div>
             <Container className={classes.titleContainer}>
@@ -157,10 +157,10 @@ function App() {
         </Paper>
         <CustomCard image={ManageImage} title="Manage Listings" description="Manage all your listings in one place" />
         <CustomCard image={AddImage} title="List Products" description="Easily pick images and add your product catalog on Beammart" />
-        <CustomCard image={EditImage} title="Edit Listings" description="Add new product images, change price and edit product information" />
+        {/* <CustomCard image={EditImage} title="Edit Listings" description="Add new product images, change price and edit product information" /> */}
         <CustomCard image={AnalyticsImage} title="Analytics" description="See how consumers are engaging with your listings" />
-        <CustomCard image={ProfileImage} title="Create Profile" description="Create your business profile in easy steps to help consumers find you" />
-        <CustomCard image={CategoriesImage} title="Product Categories" description="List across many categories on Beammart" />
+        {/* <CustomCard image={ProfileImage} title="Create Profile" description="Create your business profile in easy steps to help consumers find you" />
+        <CustomCard image={CategoriesImage} title="Product Categories" description="List across many categories on Beammart" /> */}
       </div>
       <Footer />
     </Grid>
