@@ -109,10 +109,10 @@ function App() {
       <div className={classes.root}>
         <Paper elevation={3} className={ classes.paper} >
           <div>
-            <Typography variant="h4" className={classes.title}>
+            <Typography variant="h5" className={classes.title}>
               Beammart for Consumers
           </Typography>
-            <Typography variant="h6" className={classes.title}>
+            <Typography className={classes.title}>
               Search and Discover products sold nearby.
           </Typography>
             <div className={classes.button}>
@@ -127,7 +127,7 @@ function App() {
             </div>
           </div>
         </Paper>
-        <CustomCard image={HomeImage} title="Personalized Recommendations" description="Description" />
+        <CustomCard image={HomeImage} title="Personalized Recommendations" description="Get recommendations tailored to your taste" />
         <CustomCard image={DirectionsImage} title="Directions" description="Get directions from your current location to the shop" />
         <CustomCard image={SearchImage} title="Search" description="Find what you are looking for with the search functionality" />
         {/* <CustomCard image={CategoryImage} title="Different Categories" description="Discover products across categories" />
@@ -136,12 +136,12 @@ function App() {
         <Paper elevation={3} className={classes.merchantPaper} >
           <div>
             <Container className={classes.titleContainer}>
-              <Typography variant="h4" className={classes.title}>
+              <Typography variant="h5" className={classes.title}>
                 Beammart for Merchants
               </Typography>
             </Container>
-            <Typography variant="h6" className={classes.title}>
-              Add your products on Beammart and let your potential customers discover and find them for free!
+            <Typography className={classes.title}>
+              List your products on Beammart and let your potential customers discover and find them for free!
           </Typography>
             <div className={classes.button}>
               {/* <a
