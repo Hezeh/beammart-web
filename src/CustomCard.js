@@ -17,8 +17,8 @@ const useStyles = makeStyles({
         // margin: '5px',
     },
     media: {
-        height: 200,
-        paddingTop: '56.25%',
+        height: 400,
+        // paddingTop: '56.25%',
         width: '50%',
         alignContent: 'center',
         marginLeft: '100px',
@@ -40,10 +40,10 @@ export default function CustomCard(props) {
                 <CardContent>
                     <Typography gutterBottom variant="h6" component="h2">
                         {props.title}
-          </Typography>
+                    </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         {props.description}
-          </Typography>
+                    </Typography>
                 </CardContent>
             </CardActionArea>
         </Card>

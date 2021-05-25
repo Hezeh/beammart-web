@@ -25,6 +25,7 @@ import { Container } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import CustomCard from './CustomCard';
+import Footer from './Footer';
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
@@ -140,7 +141,7 @@ function App() {
               </Typography>
             </Container>
             <Typography variant="h6" className={classes.title}>
-              Add your product offerings and let your customers discover them for free!
+              Add your products on Beammart and let your potential customers discover and find them for free!
           </Typography>
             <div className={classes.button}>
               {/* <a
@@ -161,6 +162,7 @@ function App() {
         <CustomCard image={ProfileImage} title="Create Profile" description="Create your business profile in easy steps to help consumers find you" />
         <CustomCard image={CategoriesImage} title="Product Categories" description="List across many categories on Beammart" />
       </div>
+      <Footer />
     </Grid>
   );
 }
