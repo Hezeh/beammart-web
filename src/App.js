@@ -26,6 +26,12 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import CustomCard from './CustomCard';
 import Footer from './Footer';
+import Card from '@material-ui/core/Card'
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
@@ -84,6 +90,28 @@ const useStyles = makeStyles((theme) => ({
   all: {
     background: '#000000',
     flexGrow: 1,
+  },
+  card: {
+    // maxWidth: 600,
+    // minHeight: 550,
+    display: 'flex',
+    background: 'linear-gradient(45deg, #ec008c 10%, #E94057 60%, #fc6767 90%)',
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 'auto',
+  },
+  downloadText: {
+    textAlign: 'center'
+  },
+  homeImage: {
+    height: 1000,
+    // paddingTop: '56.25%',
+    width: '100%',
+    // alignContent: 'center',
+    marginLeft: '10px',
+    marginTop: '5px',
+    marginBottom: '10px',
+    marginRight: '10px'
   }
 }));
 
@@ -107,26 +135,32 @@ function App() {
     <Grid className={classes.all}>
       <ButtonAppBar />
       <div className={classes.root}>
-        <Paper elevation={3} className={ classes.paper} >
-          <div>
-            <Typography variant="h5" className={classes.title}>
-              Beammart for Consumers
-          </Typography>
-            <Typography className={classes.title}>
-              Search and Discover products sold nearby.
-          </Typography>
-            <div className={classes.button}>
-              {/* <a
+        <Card className={classes.card}>
+            <CardContent>
+              <Typography gutterBottom variant="h1" component="h2">
+                Discover Products Sold Nearby.
+                  </Typography>
+              <Typography variant="body2" color="textSecondary" component="p" className={classes.downloadText}>
+                Download the Beammart app
+                  </Typography>
+              <div className={classes.button}>
+                {/* <a
                 href="https://apple.com"
                 target="_blank"
               ><img src={ioslogo} height={50} className={classes.iosImage} /> </a> */}
-              <a
-                href="https://play.google.com/store/apps/details?id=com.beammart.beammart"
-                target="_blank"
-              ><img src={playBadge} height={60} /> </a>
-            </div>
-          </div>
-        </Paper>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.beammart.beammart"
+                  target="_blank"
+                ><img src={playBadge} height={60} /> </a>
+              </div>
+          </CardContent>
+          {/* <CardMedia
+            className={classes.homeImage}
+            image={HomeImage}
+            title="Beammart"
+          /> */}
+        </Card>
+        
         <CustomCard image={HomeImage} title="Personalized Recommendations" description="Get recommendations tailored to your taste" />
         <CustomCard image={DirectionsImage} title="Directions" description="Get directions from your current location to the shop" />
         <CustomCard image={SearchImage} title="Search" description="Find what you are looking for with the search functionality" />
@@ -136,8 +170,8 @@ function App() {
         <Paper elevation={3} className={classes.merchantPaper} >
           <div>
             <Container className={classes.titleContainer}>
-              <Typography variant="h5" className={classes.title}>
-                Beammart for Merchants
+              <Typography variant="h3" className={classes.title}>
+                Merchants
               </Typography>
             </Container>
             <Typography className={classes.title}>
