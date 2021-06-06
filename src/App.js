@@ -163,7 +163,7 @@ function App() {
               For Merchants
             </Typography>
             <Typography className={classes.title}>
-              List your products and let potential customers discover and find them on Beammart.
+              List your products and let customers discover and find them on Beammart.
           </Typography>
             <div className={classes.button}>
               {/* <a
