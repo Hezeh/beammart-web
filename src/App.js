@@ -38,8 +38,9 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    flexGrow: 1,
+    // flexGrow: 1,
     textAlign: 'center',
+    justifyContent: 'center',
   },
   brand: {
     flexGrow: 1,
@@ -63,9 +64,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     display: 'flex'
   },
-  titleContainer: {
-    margin: theme.spacing(1)
-  },
   mobileStoreButton: {
     marginRight: 100
   },
@@ -82,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'auto'
   },
   merchantPaper: {
-    background: 'linear-gradient(45deg, #ff00cc 10%, #333399 60%, #fc6767 90%)',
+    background: 'linear-gradient(90deg, #ff00cc 10%, #fc6767 90%)',
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     color: 'white',
     height: "auto",
@@ -92,22 +90,19 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   card: {
-    // maxWidth: 600,
-    // minHeight: 550,
-    display: 'flex',
-    background: 'linear-gradient(45deg, #ec008c 10%, #E94057 60%, #fc6767 90%)',
+    background: 'linear-gradient(90deg, #ec008c 10%, #fc6767 90%)',
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     color: 'white',
     height: 'auto',
   },
   downloadText: {
-    textAlign: 'center'
+    textAlign: 'center',
+    justifyContent: 'center',
+    display: 'flex'
   },
   homeImage: {
     height: 1000,
-    // paddingTop: '56.25%',
     width: '100%',
-    // alignContent: 'center',
     marginLeft: '10px',
     marginTop: '5px',
     marginBottom: '10px',
@@ -119,13 +114,13 @@ function ButtonAppBar() {
   const classes = useStyles();
 
   return (
-      <AppBar position="static" color="secondary">
-        <Toolbar>
-          <Typography variant="h6" className={classes.brand}>
-            Beammart
+    <AppBar position="static" color="secondary">
+      <Toolbar>
+        <Typography variant="h5" className={classes.brand}>
+          BEAMMART
           </Typography>
-        </Toolbar>
-      </AppBar>
+      </Toolbar>
+    </AppBar>
   );
 }
 
@@ -136,46 +131,39 @@ function App() {
       <ButtonAppBar />
       <div className={classes.root}>
         <Card className={classes.card}>
-            <CardContent>
-              <Typography gutterBottom variant="h1" component="h2">
-                Discover Products Sold Nearby.
+          <CardContent>
+            <Typography gutterBottom variant="h2" component="h2" className={classes.title}>
+              Discover Products Sold Nearby.
                   </Typography>
-              <Typography variant="body2" color="textSecondary" component="p" className={classes.downloadText}>
-                Download the Beammart app
+            <Typography variant="body2" component="p" className={classes.downloadText}>
+              Download the Beammart app
                   </Typography>
-              <div className={classes.button}>
-                {/* <a
+            <div className={classes.button}>
+              {/* <a
                 href="https://apple.com"
                 target="_blank"
               ><img src={ioslogo} height={50} className={classes.iosImage} /> </a> */}
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.beammart.beammart"
-                  target="_blank"
-                ><img src={playBadge} height={60} /> </a>
-              </div>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.beammart.beammart"
+                target="_blank"
+              ><img src={playBadge} height={60} /> </a>
+            </div>
           </CardContent>
-          {/* <CardMedia
-            className={classes.homeImage}
-            image={HomeImage}
-            title="Beammart"
-          /> */}
         </Card>
-        
+
         <CustomCard image={HomeImage} title="Personalized Recommendations" description="Get recommendations tailored to your taste" />
         <CustomCard image={DirectionsImage} title="Directions" description="Get directions from your current location to the shop" />
         <CustomCard image={SearchImage} title="Search" description="Find what you are looking for with the search functionality" />
         {/* <CustomCard image={CategoryImage} title="Different Categories" description="Discover products across categories" />
         <CustomCard image={WishlistImage} title="Wishlist" description="Save Items you might want to buy in a wishlist" />
         <CustomCard image={ShopImage} title="Merchant Details" description="Find more about the shop including operating hours and more products" /> */}
-        <Paper elevation={3} className={classes.merchantPaper} >
-          <div>
-            <Container className={classes.titleContainer}>
-              <Typography variant="h3" className={classes.title}>
-                Merchants
-              </Typography>
-            </Container>
+        <Card className={classes.merchantPaper} >
+          <CardContent>
+            <Typography gutterBottom variant="h2" component="h2" className={classes.title}>
+              For Merchants
+            </Typography>
             <Typography className={classes.title}>
-              List your products on Beammart and let your potential customers discover and find them for free!
+              List your products and let potential customers discover and find them on Beammart.
           </Typography>
             <div className={classes.button}>
               {/* <a
@@ -187,8 +175,8 @@ function App() {
                 target="_blank"
               ><img src={playBadge} height={60} /> </a>
             </div>
-          </div>
-        </Paper>
+          </CardContent>
+        </Card>
         <CustomCard image={ManageImage} title="Manage Listings" description="Manage all your listings in one place" />
         <CustomCard image={AddImage} title="List Products" description="Easily pick images and add your product catalog on Beammart" />
         {/* <CustomCard image={EditImage} title="Edit Listings" description="Add new product images, change price and edit product information" /> */}
