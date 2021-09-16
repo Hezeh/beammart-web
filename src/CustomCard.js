@@ -27,7 +27,6 @@ export default function CustomCard(props) {
 
     return (
         <Card className={classes.root}>
-
             <CardMedia
                 className={classes.media}
                 image={props.image}
@@ -41,7 +40,6 @@ export default function CustomCard(props) {
                     {props.description}
                 </Typography>
             </CardContent>
-
         </Card>
     );
 }

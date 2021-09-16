@@ -4,10 +4,11 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import { Grid } from '@material-ui/core';
 
 function Copyright() {
     return (
-        <Typography variant="body2" color="textSecondary">
+        <Typography variant="body2" color="textSecondary" align="center" gutterBottom>
             {'Copyright © '}
             <Link color="inherit" href="https://beammart.app/">
                 Beammart Corporation
@@ -42,10 +43,20 @@ export default function StickyFooter() {
     return (
         <>
             <footer className={classes.footer}>
-                <Container>
-                    {/* <Typography variant="body1">My sticky footer can be found here.</Typography> */}
+                <Grid container>
+
+                    <Grid item xs={6} sm={6}>
+                        <Typography variant="h6" color="secondary" align="center" gutterBottom>About Us</Typography>
+                        <Typography variant="h6" color="secondary" align="center" gutterBottom>Suppliers</Typography>
+                        <Typography variant="h6" color="secondary" align="center" gutterBottom>Distributors</Typography>
+                    </Grid>
+                    <Grid item xs={6} sm={6}>
+                        <Typography variant="h6" color="secondary" align="center" gutterBottom>Resource Center</Typography>
+                        <Typography variant="h6" color="secondary" align="center" gutterBottom>Our Partners</Typography>
+                        <Typography variant="h6" color="secondary" align="center" gutterBottom>How It Works</Typography>
+                    </Grid>
                     <Copyright />
-                </Container>
+                </Grid>
             </footer>
         </>
     );
