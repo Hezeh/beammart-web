@@ -120,7 +120,6 @@ function Home() {
     const classes = useStyles();
     return (
         <Grid className={classes.all}>
-            <CustomAppBar />
             <div className={classes.root}>
                 <IntroCard />
                 <NoInterestGrid />
