@@ -22,6 +22,8 @@ import { motion } from "framer-motion"
 import NoInterestGrid from './home/NoInterest';
 import IntroCard from './home/IntroCard';
 import SupplierEarlyAccessButton from './home/SupplierEarlyAccessButton';
+import CreditLimitGrid from './home/CreditLimitGrid';
+import SplitPaymentsGrid from './home/SplitPayments';
 
 const useStyles = makeStyles((theme) => ({
     menuButton: {
@@ -122,10 +124,8 @@ function Home() {
             <div className={classes.root}>
                 <IntroCard />
                 <NoInterestGrid />
-
-                {/* <CustomCard image={HomeImage} title="Personalized Recommendations" description="Get recommendations tailored to your taste" />
-                <CustomCard image={DirectionsImage} title="Directions" description="Get directions from your current location to the shop" />
-                <CustomCard image={SearchImage} title="Search" description="Find what you are looking for with the search functionality" /> */}
+                <CreditLimitGrid />
+                <SplitPaymentsGrid />
                 <Card className={classes.merchantPaper} >
                     <CardContent>
                         <Typography gutterBottom variant="h2" component="h2" className={classes.title}>
@@ -140,9 +140,6 @@ function Home() {
                         </div>
                     </CardContent>
                 </Card>
-                {/* <CustomCard image={ManageImage} title="Manage Listings" description="Manage all your listings in one place" />
-                <CustomCard image={AddImage} title="List Products" description="Easily pick images and add your product catalog on Beammart" />
-                <CustomCard image={AnalyticsImage} title="Analytics" description="See how consumers are engaging with your listings" /> */}
             </div>
             <Footer />
         </Grid>
