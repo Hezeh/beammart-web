@@ -21,7 +21,8 @@ export default function SupplierEarlyAccessButton() {
     return (
         <Button
             className={classes.button}
-            href="https://cdn.forms-content.sg-form.com/ddb4d4ec-183e-11ec-a68e-8a8c2ef16e1a"
+            // href="https://cdn.forms-content.sg-form.com/ddb4d4ec-183e-11ec-a68e-8a8c2ef16e1a"
+            href="https://54x6vu02lpw.typeform.com/to/LAtH0gIW"
         >
             Get Early Access
         </Button>
