@@ -21,6 +21,7 @@ export default function EarlyAccessButton() {
     return (
         <Button
             className={classes.button}
+            href="https://54x6vu02lpw.typeform.com/to/N4K2RDj7"
         >
             Get Early Access
         </Button>
